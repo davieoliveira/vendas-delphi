@@ -1,0 +1,42 @@
+object ModelConexaoDM: TModelConexaoDM
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=Vendas'
+      'User_Name=root'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 144
+    Top = 112
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 648
+    Top = 544
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 672
+    Top = 432
+  end
+  object SQLQuery1: TSQLQuery
+    Params = <>
+    Left = 144
+    Top = 256
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from cidade')
+    Left = 296
+    Top = 112
+  end
+  object FDTable1: TFDTable
+    Connection = FDConnection1
+    Left = 424
+    Top = 120
+  end
+end

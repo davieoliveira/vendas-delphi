@@ -2,8 +2,8 @@ object ViewPrincipal: TViewPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema Vendas'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 226
+  ClientWidth = 418
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
