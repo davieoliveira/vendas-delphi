@@ -1,13 +1,13 @@
 object ModelCidadeDM: TModelCidadeDM
-  Height = 256
+  Height = 237
   Width = 367
   PixelsPerInch = 120
   object QCidadeCadastro: TFDQuery
     Connection = ModelConexaoDM.FDConnection1
     SQL.Strings = (
       'select * from cidade')
-    Left = 64
-    Top = 32
+    Left = 88
+    Top = 40
     object QCidadeCadastroid: TFDAutoIncField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'id'
@@ -38,16 +38,16 @@ object ModelCidadeDM: TModelCidadeDM
   end
   object DSCidadeCadastro: TDataSource
     DataSet = QCidadeCadastro
-    Left = 64
-    Top = 112
+    Left = 88
+    Top = 120
   end
   object QCidadeBusca: TFDQuery
     Connection = ModelConexaoDM.FDConnection1
     SQL.Strings = (
       'select * from cidade'
       '')
-    Left = 216
-    Top = 32
+    Left = 240
+    Top = 40
     object QCidadeBuscaid: TFDAutoIncField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'id'
@@ -78,7 +78,7 @@ object ModelCidadeDM: TModelCidadeDM
   end
   object DSCidadeBusca: TDataSource
     DataSet = QCidadeBusca
-    Left = 216
-    Top = 112
+    Left = 240
+    Top = 120
   end
 end

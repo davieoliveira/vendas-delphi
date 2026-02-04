@@ -8,25 +8,32 @@
     <Transaction>2026/02/02 19:57:32.000.156,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
     <Transaction>2026/02/02 20:00:36.000.264,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\model.conexao.DM.pas</Transaction>
     <Transaction>2026/02/02 20:00:36.000.264,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\model.conexao.DM.dfm</Transaction>
-    <Transaction>2026/02/02 23:08:35.294,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
-    <Transaction>2026/02/02 23:09:23.912,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
-    <Transaction>2026/02/02 23:09:23.912,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm</Transaction>
-    <Transaction>2026/02/02 23:10:28.808,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.pas=</Transaction>
-    <Transaction>2026/02/02 23:10:35.609,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
-    <Transaction>2026/02/02 23:12:55.090,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.pas</Transaction>
-    <Transaction>2026/02/02 23:13:19.855,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Conexao.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.pas</Transaction>
-    <Transaction>2026/02/02 23:13:19.855,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Conexao.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.dfm</Transaction>
-    <Transaction>2026/02/02 23:13:37.510,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Cidade.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm</Transaction>
-    <Transaction>2026/02/02 23:13:37.510,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Cidade.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
-  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
-    <File Path="view"/>
-    <File Path="view\View.Principal.pas"/>
-    <File Path="view\View.Principal.dfm"/>
+    <Transaction>2026/02/02 23:08:35.000.294,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+    <Transaction>2026/02/02 23:09:23.000.912,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm</Transaction>
+    <Transaction>2026/02/02 23:09:23.000.912,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+    <Transaction>2026/02/02 23:10:28.000.808,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Model.Cidade.DM.pas=</Transaction>
+    <Transaction>2026/02/02 23:10:35.000.609,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+    <Transaction>2026/02/02 23:12:55.000.090,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.pas</Transaction>
+    <Transaction>2026/02/02 23:13:19.000.855,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Conexao.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.pas</Transaction>
+    <Transaction>2026/02/02 23:13:19.000.855,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Conexao.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit2.dfm</Transaction>
+    <Transaction>2026/02/02 23:13:37.000.510,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Cidade.DM.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+    <Transaction>2026/02/02 23:13:37.000.510,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\model\conexao\Model.Cidade.DM.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm</Transaction>
+    <Transaction>2026/02/03 22:52:24.896,=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+    <Transaction>2026/02/03 22:52:46.077,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\view\Herancas\View.Herancas.Buscar.dfm=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.dfm</Transaction>
+    <Transaction>2026/02/03 22:52:46.077,C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\view\Herancas\View.Herancas.Buscar.pas=C:\Users\davie\OneDrive\Documentos\delphi\projeto vendas\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="model"/>
     <File Path="model\conexao"/>
     <File Path="model\conexao\Model.Conexao.DM.pas"/>
     <File Path="model\conexao\Model.Conexao.DM.dfm"/>
     <File Path="model\conexao\Model.Cidade.DM.pas"/>
     <File Path="model\conexao\Model.Cidade.DM.dfm"/>
+    <File Path="view"/>
+    <File Path="view\Herancas"/>
+    <File Path="view\Herancas\View.Herancas.Buscar.pas"/>
+    <File Path="view\Herancas\View.Herancas.Buscar.dfm"/>
+    <File Path="view\View.Principal.pas"/>
+    <File Path="view\View.Principal.dfm"/>
   </ProjectSortOrder>
 </BorlandProject>

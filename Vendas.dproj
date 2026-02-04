@@ -128,14 +128,18 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="model\conexao\Model.Cidade.DM.pas">
-            <Form>DataModule1</Form>
+            <Form>ModelCidadeDM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="model\conexao\Model.Conexao.DM.pas">
-            <Form>DataModule2</Form>
+            <Form>ModelConexaoDM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="view\Herancas\View.Herancas.Buscar.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

@@ -3,8 +3,9 @@ program Vendas;
 uses
   Vcl.Forms,
   View.Principal in 'view\View.Principal.pas' {ViewPrincipal},
-  Model.Cidade.DM in 'model\conexao\Model.Cidade.DM.pas' {DataModule1: TDataModule},
-  Model.Conexao.DM in 'model\conexao\Model.Conexao.DM.pas' {DataModule2: TDataModule};
+  Model.Cidade.DM in 'model\conexao\Model.Cidade.DM.pas' {ModelCidadeDM: TDataModule},
+  Model.Conexao.DM in 'model\conexao\Model.Conexao.DM.pas' {ModelConexaoDM: TDataModule},
+  View.Herancas.Buscar in 'view\Herancas\View.Herancas.Buscar.pas' {Form1};
 
 {$R *.res}
 
@@ -12,7 +13,8 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
-  Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TDataModule2, DataModule2);
+  Application.CreateForm(TModelCidadeDM, ModelCidadeDM);
+  Application.CreateForm(TModelConexaoDM, ModelConexaoDM);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
