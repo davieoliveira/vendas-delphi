@@ -14,7 +14,7 @@ type
     PnRodape: TPanel;
     LbPesquisa: TLabel;
     EdtBuscar: TEdit;
-    RadioGroup1: TRadioGroup;
+    RdGroupFiltros: TRadioGroup;
     BtnCadastrar: TBitBtn;
     BtnUtilizar: TBitBtn;
     BtnFechar: TBitBtn;
@@ -32,6 +32,8 @@ type
     procedure EdtBuscarChange(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure DBGrid1KeyPress(Sender: TObject; var Key: Char);
+    procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
   Protected
@@ -64,22 +66,29 @@ begin
   self.ModalResult := mrOk;
 end;
 
-procedure TViewHerancasBuscar.EdtBuscarChange(Sender: TObject);
-begin
-  self.buscarDados;
-end;
-
 procedure TViewHerancasBuscar.BuscarDados;
 begin
-  LbTotal:= 'Registros localizados: 000000'
-  if(DataSource1.DataSet.IsEmpty) then
-    exit;
-  LbTotal:= 'Registros localizados:' + FormatFloat('000000', DataSource1.DataSet.RecordCount);
+  LbTotal.Caption := 'Registros localizados: 000000';
+
+  if DataSource1.DataSet.IsEmpty then
+    Exit;
+
+  LbTotal.Caption :=
+    'Registros localizados: ' +
+    FormatFloat('000000', DataSource1.DataSet.RecordCount);
 end;
 
 procedure TViewHerancasBuscar.DBGrid1DblClick(Sender: TObject);
 begin
   BtnUtilizar.click;
+end;
+
+procedure TViewHerancasBuscar.DBGrid1DrawColumnCell(Sender: TObject;
+  const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
+begin
+  if(not Odd(DataSource1.DataSet.RecNo))then
+    DbGrid1.Canvas.Brush.Color := $00DDDDDD;
+  DBGrid1.DefaultDrawColumnCell(Rect, DataCol, Column, State);
 end;
 
 procedure TViewHerancasBuscar.DBGrid1KeyPress(Sender: TObject; var Key: Char);
@@ -115,6 +124,11 @@ begin
     end;
     VK_ESCAPE: btnFechar.Click;
   end;
+end;
+
+procedure TViewHerancasBuscar.EdtBuscarChange(Sender: TObject);
+begin
+   //
 end;
 
 procedure TViewHerancasBuscar.FormShow(Sender: TObject);

@@ -11,9 +11,7 @@ uses
 type
   TModelCidadeDM = class(TDataModule)
     QCidadeCadastro: TFDQuery;
-    DSCidadeCadastro: TDataSource;
     QCidadeBusca: TFDQuery;
-    DSCidadeBusca: TDataSource;
     QCidadeCadastroid: TFDAutoIncField;
     QCidadeCadastronome: TStringField;
     QCidadeCadastroUF: TStringField;

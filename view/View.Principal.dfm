@@ -78,6 +78,7 @@ object ViewPrincipal: TViewPrincipal
           D8CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCD1D1D194BBE86C
           BAFF67B3FF76BCFAA7C0DFCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC}
         Caption = 'Cidades'
+        OnClick = Cidades1Click
       end
       object Pessoas1: TMenuItem
         Bitmap.Data = {

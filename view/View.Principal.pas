@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, View.Cidades.Buscar, View.Herancas.Buscar;
 
 type
   TViewPrincipal = class(TForm)
@@ -23,6 +23,7 @@ type
     ContasaReceber1: TMenuItem;
     Configuraes1: TMenuItem;
     NFCe1: TMenuItem;
+    procedure Cidades1Click(Sender: TObject);
   private
     { Private declarations }
   public

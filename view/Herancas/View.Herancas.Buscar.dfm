@@ -38,6 +38,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
       TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
+      OnDrawColumnCell = DBGrid1DrawColumnCell
       OnDblClick = DBGrid1DblClick
       OnKeyPress = DBGrid1KeyPress
     end
@@ -94,7 +95,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Height = 65
     Align = alBottom
     TabOrder = 2
-    object RadioGroup1: TRadioGroup
+    object RdGroupFiltros: TRadioGroup
       Left = 0
       Top = 6
       Width = 273
@@ -297,7 +298,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     end
   end
   object DataSource1: TDataSource
-    Left = 136
-    Top = 185
+    Left = 104
+    Top = 145
   end
 end
