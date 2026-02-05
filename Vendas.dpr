@@ -6,7 +6,7 @@ uses
   Model.Cidade.DM in 'model\conexao\Model.Cidade.DM.pas' {ModelCidadeDM: TDataModule},
   Model.Conexao.DM in 'model\conexao\Model.Conexao.DM.pas' {ModelConexaoDM: TDataModule},
   View.Herancas.Buscar in 'view\Herancas\View.Herancas.Buscar.pas' {ViewHerancasBuscar},
-  View.Cidades.Buscar in 'Cidades\View.Cidades.Buscar.pas' {ViewHerancasBuscar1};
+  View.Cidades.Buscar in 'Cidades\View.Cidades.Buscar.pas' {ViewCidadeBuscar};
 
 {$R *.res}
 
@@ -17,6 +17,6 @@ begin
   Application.CreateForm(TModelCidadeDM, ModelCidadeDM);
   Application.CreateForm(TModelConexaoDM, ModelConexaoDM);
   Application.CreateForm(TViewHerancasBuscar, ViewHerancasBuscar);
-  Application.CreateForm(TViewHerancasBuscar1, ViewHerancasBuscar1);
+  Application.CreateForm(TViewCidadeBuscar, ViewCidadeBuscar);
   Application.Run;
 end.

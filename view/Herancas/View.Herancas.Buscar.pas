@@ -128,7 +128,7 @@ end;
 
 procedure TViewHerancasBuscar.EdtBuscarChange(Sender: TObject);
 begin
-   //
+   Self.BuscarDados;
 end;
 
 procedure TViewHerancasBuscar.FormShow(Sender: TObject);

@@ -142,7 +142,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Cidades\View.Cidades.Buscar.pas">
-            <Form>ViewHerancasBuscar1</Form>
+            <Form>ViewCidadeBuscar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

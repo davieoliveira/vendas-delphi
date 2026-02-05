@@ -1,8 +1,8 @@
 inherited ViewCidadeBuscar: TViewCidadeBuscar
   Caption = 'ViewCidadeBuscar'
   StyleElements = [seFont, seClient, seBorder]
-  ExplicitLeft = 2
-  ExplicitTop = 2
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 15
   inherited PnGrid: TPanel
     StyleElements = [seFont, seClient, seBorder]

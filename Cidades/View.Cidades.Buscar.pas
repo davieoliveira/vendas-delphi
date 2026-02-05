@@ -9,6 +9,8 @@ uses
 
 type
   TViewCidadeBuscar = class(TViewHerancasBuscar)
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
   Protected
@@ -34,12 +36,25 @@ var LCondicao: string;
 begin
   Lcondicao := '';
   case RdGroupFiltros.ItemIndex of
-    0: LCondicao := '';
-    1: LCondicao := '';
-    2: LCondicao := '';
+    0: LCondicao := 'where(id like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
+    1: LCondicao := 'where(nome like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
+    2: LCondicao := 'where(uf like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
   end;
-
+  ModelCidadeDM.CidadeBuscar(LCondicao);
   inherited;
+end;
+
+procedure TViewCidadeBuscar.FormCreate(Sender: TObject);
+begin
+  inherited;
+  if(ModelCidadeDM = nil)then
+    ModelCidadeDM := TModelCidadeDM.Create(nil);
+end;
+
+procedure TViewCidadeBuscar.FormDestroy(Sender: TObject);
+begin
+  inherited;
+  FreeAndNil(ModelCidadeDM);
 end;
 
 end.

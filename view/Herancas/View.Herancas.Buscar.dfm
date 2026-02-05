@@ -22,9 +22,6 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Height = 375
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 33
-    ExplicitHeight = 327
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1

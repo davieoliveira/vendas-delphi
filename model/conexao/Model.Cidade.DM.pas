@@ -24,6 +24,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    procedure CidadeBuscar(const ACondicao: String);
   end;
 
 var
@@ -36,5 +37,16 @@ implementation
 uses Model.Conexao.DM;
 
 {$R *.dfm}
+
+{ TModelCidadeDM }
+
+procedure TModelCidadeDM.CidadeBuscar(const ACondicao: String);
+begin
+  QCidadeBusca.close;
+  QCidadeBusca.SQL.clear;
+  QCidadeBusca.SQL.Add('select * from cidade');
+  QCidadeBusca.SQL.Add(Acondicao);
+  QCidadeBusca.Open;
+end;
 
 end.

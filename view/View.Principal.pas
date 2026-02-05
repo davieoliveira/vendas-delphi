@@ -37,4 +37,14 @@ implementation
 
 {$R *.dfm}
 
+procedure TViewPrincipal.Cidades1Click(Sender: TObject);
+begin
+  ViewCidadeBuscar := TViewCidadeBuscar.Create(Self);
+  try
+    ViewCidadeBuscar.ShowModal;
+  finally
+    FreeAndNil(ViewCidadeBuscar);
+  end;
+end;
+
 end.
