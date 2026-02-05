@@ -45,6 +45,7 @@ begin
   QCidadeBusca.close;
   QCidadeBusca.SQL.clear;
   QCidadeBusca.SQL.Add('select * from cidade');
+  // Aqui ele espera um where para aplicar o filtro.
   QCidadeBusca.SQL.Add(Acondicao);
   QCidadeBusca.Open;
 end;

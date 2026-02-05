@@ -32,13 +32,18 @@ uses Model.Cidade.DM;
 { TViewHerancasBuscar1 }
 
 procedure TViewCidadeBuscar.BuscarDados;
-var LCondicao: string;
+var
+LStrBuscar : string;
+LCondicao: string;
+
 begin
+  // Filtro do input(Edit) de busca.
+  LStrBuscar := QuotedStr('%'+EdtBuscar.Text + '%').ToUpper;
   Lcondicao := '';
   case RdGroupFiltros.ItemIndex of
-    0: LCondicao := 'where(id like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
-    1: LCondicao := 'where(nome like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
-    2: LCondicao := 'where(uf like' + QuotedStr('%'+EdtBuscar.Text + '%') + ')';
+    0: LCondicao := 'where(upper(id) like' + LStrBuscar + ')';
+    1: LCondicao := 'where(upper(nome) like' + LStrBuscar + ')';
+    2: LCondicao := 'where(upper(uf) like' + LStrBuscar + ')';
   end;
   ModelCidadeDM.CidadeBuscar(LCondicao);
   inherited;

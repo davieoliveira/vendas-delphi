@@ -39,7 +39,7 @@ implementation
 
 procedure TViewPrincipal.Cidades1Click(Sender: TObject);
 begin
-  ViewCidadeBuscar := TViewCidadeBuscar.Create(Self);
+  ViewCidadeBuscar := TViewCidadeBuscar.Create(nil);
   try
     ViewCidadeBuscar.ShowModal;
   finally

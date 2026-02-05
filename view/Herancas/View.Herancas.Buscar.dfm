@@ -79,7 +79,6 @@ object ViewHerancasBuscar: TViewHerancasBuscar
       Width = 585
       Height = 23
       TabOrder = 0
-      Text = 'Edit1'
       OnChange = EdtBuscarChange
       OnKeyDown = EdtBuscarKeyDown
       OnKeyPress = EdtBuscarKeyPress
