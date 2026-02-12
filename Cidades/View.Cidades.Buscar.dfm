@@ -1,12 +1,16 @@
 inherited ViewCidadeBuscar: TViewCidadeBuscar
-  Caption = 'ViewCidadeBuscar'
+  Caption = 'Buscar Cidade'
+  ClientWidth = 745
   StyleElements = [seFont, seClient, seBorder]
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  ExplicitWidth = 761
   TextHeight = 15
   inherited PnGrid: TPanel
+    Width = 745
     StyleElements = [seFont, seClient, seBorder]
     inherited DBGrid1: TDBGrid
+      Width = 743
       DataSource = DataSource1
       Columns = <
         item
@@ -17,13 +21,11 @@ inherited ViewCidadeBuscar: TViewCidadeBuscar
         item
           Expanded = False
           FieldName = 'nome'
-          Width = 250
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'UF'
-          Width = 40
           Visible = True
         end
         item
@@ -33,6 +35,7 @@ inherited ViewCidadeBuscar: TViewCidadeBuscar
         end>
     end
     inherited PnTotal: TPanel
+      Width = 743
       StyleElements = [seFont, seClient, seBorder]
       inherited LbTotal: TLabel
         StyleElements = [seFont, seClient, seBorder]
@@ -40,6 +43,7 @@ inherited ViewCidadeBuscar: TViewCidadeBuscar
     end
   end
   inherited PnTopo: TPanel
+    Width = 745
     StyleElements = [seFont, seClient, seBorder]
     inherited LbPesquisa: TLabel
       StyleElements = [seFont, seClient, seBorder]
@@ -49,6 +53,7 @@ inherited ViewCidadeBuscar: TViewCidadeBuscar
     end
   end
   inherited PnRodape: TPanel
+    Width = 745
     StyleElements = [seFont, seClient, seBorder]
     inherited RdGroupFiltros: TRadioGroup
       Width = 298
@@ -61,8 +66,28 @@ inherited ViewCidadeBuscar: TViewCidadeBuscar
       ExplicitWidth = 298
       ExplicitHeight = 53
     end
+    inherited BtnCadastrar: TBitBtn
+      Left = 318
+      ExplicitLeft = 318
+    end
+    inherited BtnUtilizar: TBitBtn
+      Left = 528
+      ExplicitLeft = 528
+    end
+    inherited BtnFechar: TBitBtn
+      Left = 633
+      ExplicitLeft = 633
+    end
+    inherited BtnAlterar: TBitBtn
+      Left = 423
+      ExplicitLeft = 423
+    end
   end
   inherited DataSource1: TDataSource
     DataSet = ModelCidadeDM.QCidadeBusca
+  end
+  inherited PopupMenu: TPopupMenu
+    Left = 104
+    Top = 217
   end
 end

@@ -15,11 +15,11 @@ type
     QCidadeCadastroid: TFDAutoIncField;
     QCidadeCadastronome: TStringField;
     QCidadeCadastroUF: TStringField;
-    QCidadeCadastrocodigoIBGE: TIntegerField;
     QCidadeBuscaid: TFDAutoIncField;
     QCidadeBuscanome: TStringField;
     QCidadeBuscaUF: TStringField;
     QCidadeBuscacodigoIBGE: TIntegerField;
+    QCidadeCadastrocodigoIBGE: TStringField;
   private
     { Private declarations }
   public

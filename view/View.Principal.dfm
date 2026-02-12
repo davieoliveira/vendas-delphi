@@ -2,7 +2,7 @@ object ViewPrincipal: TViewPrincipal
   Left = 0
   Top = 0
   Caption = 'Sistema Vendas'
-  ClientHeight = 226
+  ClientHeight = 280
   ClientWidth = 418
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,7 +12,7 @@ object ViewPrincipal: TViewPrincipal
   Font.Style = []
   KeyPreview = True
   Menu = MainMenu1
-  WindowState = wsMaximized
+  Scaled = False
   TextHeight = 15
   object MainMenu1: TMainMenu
     Left = 24

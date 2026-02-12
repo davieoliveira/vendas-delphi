@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+  Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.Menus;
 
 type
   TViewHerancasBuscar = class(TForm)
@@ -22,6 +22,11 @@ type
     PnTotal: TPanel;
     LbTotal: TLabel;
     DataSource1: TDataSource;
+    BtnAlterar: TBitBtn;
+    PopupMenu: TPopupMenu;
+    Atualizar1: TMenuItem;
+    N1: TMenuItem;
+    Excluir1: TMenuItem;
     procedure BtnFecharClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure BtnUtilizarClick(Sender: TObject);
@@ -34,6 +39,10 @@ type
     procedure DBGrid1KeyPress(Sender: TObject; var Key: Char);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
+    procedure BtnCadastrarClick(Sender: TObject);
+    procedure BtnAlterarClick(Sender: TObject);
+    procedure Atualizar1Click(Sender: TObject);
+    procedure Excluir1Click(Sender: TObject);
   private
     { Private declarations }
   Protected
@@ -51,6 +60,23 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TViewHerancasBuscar.Atualizar1Click(Sender: TObject);
+begin
+  self.BuscarDados;
+end;
+
+procedure TViewHerancasBuscar.BtnAlterarClick(Sender: TObject);
+begin
+  if(DataSource1.DataSet.IsEmpty) then
+    raise Exception.Create('Selecione um registro');
+end;
+
+procedure TViewHerancasBuscar.BtnCadastrarClick(Sender: TObject);
+begin
+  if(DataSource1.DataSet.IsEmpty) then
+    raise Exception.Create('Selecione um registro');
+end;
 
 procedure TViewHerancasBuscar.BtnFecharClick(Sender: TObject);
 begin
@@ -110,6 +136,20 @@ procedure TViewHerancasBuscar.EdtBuscarKeyPress(Sender: TObject; var Key: Char);
 begin
   if(Key = #13)and(DataSource1.DataSet.IsEmpty)then
     BtnUtilizar.Click;
+end;
+
+procedure TViewHerancasBuscar.Excluir1Click(Sender: TObject);
+begin
+    if(DataSource1.DataSet.IsEmpty) then
+      raise Exception.Create('Selecione um registro');
+    if(Application.MessageBox(
+      'Confirmar Exclusão Desde Registro? ',
+      'Confirmar Exclusão? ',
+       MB_YESNO + MB_ICONQUESTION + MB_DEFBUTTON2) <> idYes)
+    then
+      exit;
+    DataSource1.DataSet.Delete;
+    self.BuscarDados;
 end;
 
 procedure TViewHerancasBuscar.FormKeyDown(Sender: TObject; var Key: Word;

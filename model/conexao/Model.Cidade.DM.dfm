@@ -1,13 +1,12 @@
 object ModelCidadeDM: TModelCidadeDM
-  Height = 143
-  Width = 367
-  PixelsPerInch = 120
+  Height = 114
+  Width = 294
   object QCidadeCadastro: TFDQuery
     Connection = ModelConexaoDM.FDConnection1
     SQL.Strings = (
       'select * from cidade')
-    Left = 88
-    Top = 40
+    Left = 70
+    Top = 32
     object QCidadeCadastroid: TFDAutoIncField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'id'
@@ -29,11 +28,8 @@ object ModelCidadeDM: TModelCidadeDM
       FixedChar = True
       Size = 2
     end
-    object QCidadeCadastrocodigoIBGE: TIntegerField
-      AutoGenerateValue = arDefault
-      DisplayLabel = 'Codigo IBGE'
+    object QCidadeCadastrocodigoIBGE: TStringField
       FieldName = 'codigoIBGE'
-      Origin = 'codigoIBGE'
     end
   end
   object QCidadeBusca: TFDQuery
@@ -41,8 +37,8 @@ object ModelCidadeDM: TModelCidadeDM
     SQL.Strings = (
       'select * from cidade'
       '')
-    Left = 240
-    Top = 40
+    Left = 192
+    Top = 32
     object QCidadeBuscaid: TFDAutoIncField
       DisplayLabel = 'C'#243'digo'
       FieldName = 'id'
