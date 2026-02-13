@@ -1,0 +1,84 @@
+unit View.Herancas.Cadastrar;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.ExtCtrls;
+
+type
+  TViewHerancasCadastrar = class(TForm)
+    PnRodape: TPanel;
+    PnDados: TPanel;
+    BtnCancelar: TBitBtn;
+    BtnGravar: TBitBtn;
+    DataSource1: TDataSource;
+    procedure BtnCancelarClick(Sender: TObject);
+    procedure BtnGravarClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewHerancasCadastrar: TViewHerancasCadastrar;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewHerancasCadastrar.BtnCancelarClick(Sender: TObject);
+begin
+  // Verifica se o DataSet está em modo de inserção ou edição
+  // Se estiver, cancela as alterações feitas
+  if(DataSource1.DataSet.State in [dsInsert, dsEdit])then
+    DataSource1.DataSet.Cancel;
+  // Fecha o formulário
+  self.close;
+  // Define o resultado do formulário como Cancelar (bom para show modal)
+  self.ModalResult := mrCancel;
+end;
+
+procedure TViewHerancasCadastrar.BtnGravarClick(Sender: TObject);
+begin
+  // Fecha formulário
+  Self.Close;
+  // Indica que a operação foi confirmada
+  self.modalResult := mrOk;
+end;
+
+procedure TViewHerancasCadastrar.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+    case(Key)of
+        // F3 executa o botão Gravar
+        VK_F3:
+        BtnGravar.Click;
+        // F4 (quando pressionado com ALT) apenas bloqueia a ação padrão
+        VK_F4:
+        begin
+            if(ssAlt in Shift)then
+                Key := 0; // Impede o fechamento do formulário via Alt + F4
+        end;
+        // ESC executa o botão Cancelar
+        VK_ESCAPE:
+        BtnCancelar.Click;
+    end;
+end;
+
+procedure TViewHerancasCadastrar.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+    //Quando pressionar ENTER #13
+    if(Key = #13)then
+    begin
+        //simula a tecla TAB para avançar para o próximo campo
+        Perform(CM_DIALOGKEY, VK_TAB, 0);
+        Key := #0
+    end;
+end;
+
+end.

@@ -12,6 +12,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
+  Position = poDesktopCenter
   OnKeyDown = FormKeyDown
   OnShow = FormShow
   TextHeight = 15
@@ -22,7 +23,8 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Height = 375
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 624
+    ExplicitWidth = 734
+    ExplicitHeight = 367
     object DBGrid1: TDBGrid
       Left = 1
       Top = 1
@@ -48,12 +50,13 @@ object ViewHerancasBuscar: TViewHerancasBuscar
       Height = 34
       Align = alBottom
       TabOrder = 1
-      ExplicitWidth = 622
+      ExplicitTop = 332
+      ExplicitWidth = 732
       object LbTotal: TLabel
         Left = 576
         Top = 6
         Width = 148
-        Height = 23
+        Height = 15
         Caption = 'Registros Localizados: 00000'
         Layout = tlCenter
       end
@@ -69,7 +72,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     BevelKind = bkTile
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 624
+    ExplicitWidth = 734
     object LbPesquisa: TLabel
       Left = 16
       Top = 16
@@ -95,7 +98,8 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Height = 65
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 444
+    ExplicitTop = 440
+    ExplicitWidth = 734
     object RdGroupFiltros: TRadioGroup
       Left = 0
       Top = 6
@@ -366,12 +370,12 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     end
   end
   object DataSource1: TDataSource
-    Left = 104
-    Top = 145
+    Left = 656
+    Top = 97
   end
   object PopupMenu: TPopupMenu
-    Left = 400
-    Top = 153
+    Left = 656
+    Top = 161
     object Atualizar1: TMenuItem
       Bitmap.Data = {
         F6060000424DF606000000000000360000002800000018000000180000000100
