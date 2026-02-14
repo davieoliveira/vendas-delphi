@@ -8,7 +8,7 @@ uses
   View.Herancas.Buscar in 'view\Herancas\View.Herancas.Buscar.pas' {ViewHerancasBuscar},
   View.Herancas.Cadastrar in 'view\Herancas\View.Herancas.Cadastrar.pas' {ViewHerancasCadastrar},
   View.Cidades.Buscar in 'Cidades\View.Cidades.Buscar.pas' {ViewCidadeBuscar},
-  View.Cidades.Cadastrar in 'Cidades\View.Cidades.Cadastrar.pas' {ViewCidadesCadastrar};
+  View.Cidades.Cadastrar in 'Cidades\View.Cidades.Cadastrar.pas' {ViewHerancasCadastrar1};
 
 {$R *.res}
 
@@ -17,6 +17,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
   Application.CreateForm(TModelConexaoDM, ModelConexaoDM);
-  Application.CreateForm(TViewCidadesCadastrar, ViewCidadesCadastrar);
+  Application.CreateForm(TViewHerancasCadastrar1, ViewHerancasCadastrar1);
   Application.Run;
 end.

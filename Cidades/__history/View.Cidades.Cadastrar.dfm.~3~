@@ -1,0 +1,82 @@
+inherited ViewCidadesCadastrar: TViewCidadesCadastrar
+  Caption = 'Cadastro cidade'
+  StyleElements = [seFont, seClient, seBorder]
+  TextHeight = 15
+  inherited PnRodape: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+  end
+  inherited PnDados: TPanel
+    StyleElements = [seFont, seClient, seBorder]
+    object Label1: TLabel
+      Left = 16
+      Top = 32
+      Width = 39
+      Height = 15
+      Caption = 'C'#243'digo'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 16
+      Top = 80
+      Width = 33
+      Height = 15
+      Caption = 'Nome'
+      FocusControl = DBEdit2
+    end
+    object Label3: TLabel
+      Left = 16
+      Top = 128
+      Width = 14
+      Height = 15
+      Caption = 'UF'
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 176
+      Width = 61
+      Height = 15
+      Caption = 'codigoIBGE'
+      FocusControl = DBEdit4
+    end
+    object DBEdit1: TDBEdit
+      Left = 16
+      Top = 48
+      Width = 61
+      Height = 23
+      DataField = 'id'
+      DataSource = DataSource1
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 16
+      Top = 96
+      Width = 304
+      Height = 23
+      DataField = 'nome'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit4: TDBEdit
+      Left = 16
+      Top = 192
+      Width = 97
+      Height = 23
+      DataField = 'codigoIBGE'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+  end
+  object ComboBox1: TComboBox [2]
+    Left = 16
+    Top = 149
+    Width = 97
+    Height = 23
+    TabOrder = 2
+    Text = 'ComboBox1'
+  end
+  inherited DataSource1: TDataSource
+    DataSet = ModelCidadeDM.QCidadeCadastro
+    Left = 552
+    Top = 24
+  end
+end

@@ -35,6 +35,8 @@ uses Model.Cidade.DM;
 
 procedure TViewCidadesCadastrar.BtnGravarClick(Sender: TObject);
 begin
+  inherited;
+
   if(Trim(EditNomeCidade.Text).IsEmpty)then
   begin
     EditNomeCidade.SetFocus;
@@ -56,7 +58,6 @@ begin
     end;
   end;
   DataSource1.DataSet.Post;
-  inherited;
 end;
 
 end.

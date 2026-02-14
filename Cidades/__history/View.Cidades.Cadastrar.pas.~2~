@@ -8,7 +8,7 @@ uses
   Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
 
 type
-  TViewHerancasCadastrar1 = class(TViewHerancasCadastrar)
+  TViewCidadesCadastrar = class(TViewHerancasCadastrar)
   private
     { Private declarations }
   public
@@ -16,7 +16,7 @@ type
   end;
 
 var
-  ViewHerancasCadastrar1: TViewHerancasCadastrar1;
+  ViewCidadesCadastrar: TViewCidadesCadastrar;
 
 implementation
 

@@ -16,7 +16,7 @@ type
     LabelUF: TLabel;
     LabelCodIBGE: TLabel;
     EditCodigoIBGE: TDBEdit;
-    ComboBoxUF: TDBComboBox;
+    CBUF: TDBComboBox;
     procedure BtnGravarClick(Sender: TObject);
   private
     { Private declarations }
@@ -35,28 +35,12 @@ uses Model.Cidade.DM;
 
 procedure TViewCidadesCadastrar.BtnGravarClick(Sender: TObject);
 begin
+  inherited;
   if(Trim(EditNomeCidade.Text).IsEmpty)then
   begin
     EditNomeCidade.SetFocus;
     raise Exception.Create('Preencha o campo nome');
   end;
-
-  if(Trim(ComboBoxUF.Text).IsEmpty)then
-  begin
-    ComboBoxUF.SetFocus;
-    raise Exception.Create('Preencha o campo UF');
-  end;
-
-  if(Trim(ComboBoxUF.Text).IsEmpty)then
-  begin
-    if(Length(EditCodigoIBGE.Text) <> 7)then
-    begin
-      EditCodigoIBGE.SetFocus;
-      raise Exception.Create('Código do IBGE deve conter 7 caracteres');
-    end;
-  end;
-  DataSource1.DataSet.Post;
-  inherited;
 end;
 
 end.

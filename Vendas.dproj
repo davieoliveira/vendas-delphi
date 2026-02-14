@@ -151,7 +151,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Cidades\View.Cidades.Cadastrar.pas">
-            <Form>ViewHerancasCadastrar1</Form>
+            <Form>ViewCidadesCadastrar</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
