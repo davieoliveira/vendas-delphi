@@ -160,11 +160,9 @@ object ViewHerancasCadastrar: TViewHerancasCadastrar
     Align = alClient
     Caption = ' '
     TabOrder = 1
-    ExplicitTop = -6
-    ExplicitHeight = 376
   end
   object DataSource1: TDataSource
-    Left = 144
-    Top = 96
+    Left = 32
+    Top = 56
   end
 end
